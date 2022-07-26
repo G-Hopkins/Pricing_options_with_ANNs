@@ -2,6 +2,7 @@
 
 ## Table of Contents
 - About
+- Repository navigation
 - Dataset creations
 - Model investigations
 - Model initialisation
@@ -19,6 +20,44 @@ ANN-2 is an ANN which predicts call option prices under the Black-Scholes model.
 ANN-3 is an ANN which predicts put option prices under the Black-Scholes model.
 
 ANN-4 is an ANN which predicts call and put option prices under the Heston Monte Carlo model.
+
+## Repository navigation
+
+- **'/BS_data_generation'** contains files relating to the creation of the Black-Scholes dataset:
+  - /option_pricing_formulas.py contains the Black-Scholes model
+  - /black_scholes_data_creation.ipynb shows the LHS sampling and creation of a 1,000,000 sample dataset
+  - /out_of_sample_bs_data.csv contains the out-of-sample Black-Scholes dataset used for testing
+  - /bs_data.csv is missing because of the file size
+
+- **'/ANN-1'** contains files relating to the creation of ANN-1:
+  - /ANN_1_Investigation.ipynb shows the hyperparameter tuning process
+  - /ANN_1_initialisation.ipynb shows the training of the optimal model 
+  - /ANN-1 contains the Keras model for ANN-1
+
+- **'/ANN-2_ANN-3'** contains files relating to the creation of ANN-2 and ANN-3:
+  - /ANN_2_ANN_3_investigation.ipynb shows the hyperparamter tuning process
+  - /ANN_2_ANN_3_initialisation.ipynb shows the training of the optimal ANN-2 and ANN-3 models
+  - /ANN-2 contains the Keras model for ANN-2
+  - /ANN-3 contains the Keras model for ANN-3
+ 
+- **'/ANN-1 vs ANN-2 & ANN-3 Analysis'** contains files relating to the analysis of ANN-1, ANN-2 & ANN-3 and Black-Scholes model:
+  - /Model_Comparison.ipynb shows the code for the analysis shown in the paper + more
+
+
+- **'/Heston_data_generation'** contains the files relating to the creation of the Heston dataset:
+  - /monte_carlo_class.py (adapted from Huang, 2022) contains the Heston model under the Monte Carlo solving method
+  - /monte_carlo_data_creation.ipynb shows the LHS sampling and creation of a 200,000 sample dataset
+  - /heston_data.csv is missing because of the file size
+  - /monte_carlo_prediction_spread.ipynb shows the dataset creation for the Heston Monte Carlo model's pricing differences from the mean
+  - /heston_thousand_samples_with_ten_prices.csv contains the data created in ^
+ 
+- **'/ANN-4'** contains the files relating to the creation of ANN-4:
+  - /ANN_4_investigation.ipynb shows the hyperparameter tuning process
+  - /ANN_4_initialisation.ipynb shows the training of the optimal ANN-4 model
+  - /ANN-4 contains the Keras model for ANN-4
+ 
+ - **'/ANN-4 Analysis'** contains files relating to the analysis of ANN-4 and Heston Monte Carlo model:
+   - /ANN_4_analysis.ipynb shows the code for the analysis shown in the paper + more
 
 ## Dataset creations
 
